@@ -52,9 +52,33 @@
     font-weight: light
     font-style: normal
 
+@font-face
+    font-family: 'Roboto Bold'
+    src: url('../fonts/Roboto/Roboto-Bold.eot')
+    src: url('../fonts/Roboto/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Roboto/Roboto-Bold.woff') format('woff'),
+    url('../fonts/Roboto/Roboto-Bold.ttf') format('truetype')
+    font-weight: bold
+    font-style: normal
+
+@font-face
+    font-family: 'PT Serif'
+    src: url('../fonts/PTSerif/PTSerif-Regular.eot')
+    src: url('../fonts/PTSerif/PTSerif-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/PTSerif/PTSerif-Regular.woff') format('woff'),
+    url('../fonts/PTSerif/PTSerif-Regular.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal
+
+@mixin Serif
+    font-family: 'PT Serif', sans-serif
+
 @mixin Roboto
     font-family: 'Roboto', sans-serif
-    
+
+@mixin RobotoB
+    font-family: 'Roboto Bold', sans-serif
+
 @mixin RobotoL
     font-family: 'Roboto Light', sans-serif
 
