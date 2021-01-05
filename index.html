@@ -9,34 +9,45 @@
 </head>
 
 <body>
-    <header class="header header__main" style="background: url('assets/img/header-bg.png');">
-        <div class="container">
-            <div class="header__wrapper">
-                <div class="header__logo">
-                    <img class="header__img" src="./assets/img/logo.png" alt="Logo">
+    <header class="header header__main" style="background: url('assets/img/header-bg.jpg');">
+        <div class="container header__wrapper">
+            <div class="header-logo">
+                <img class="header__img" src="./assets/img/logo.png" alt="Logo">
+            </div>
+            <div class="header__description">
+                <span class="header__date">
+                    понедельник 21 декабря 2020 года
+                </span>
+                <span class="header__text">
+                    inside information
+                </span>
+            </div>
+        </div>
+        <div class="nav__block">
+           <div class="container">
+               <div class="header-logo header-logo__mobile">
+                   <img src="assets/img/logo_mobile.png" alt="">
                 </div>
-                <div class="header__description">
-                    <span class="header__date">
-                        понедельник 21 декабря 2020 года
-                    </span>
-                    <span class="header__text">
-                        inside information
-                    </span>
+                <div class="nav-btn">
+                    <i class="nav-btn__item nav-btn__item--share"></i>
+                    <i class="nav-btn__item nav-btn__item--corrupt"></i>
                 </div>
-                <div class="nav__header">
-                    <nav class="nav__main">
-                        <ul class="nav__list">
-                            <li class="current-menu-item"><a href="#">факты</a></li>
-                            <li><a href="#">статьи</a></li>
-                            <li><a href="#">персоналии</a></li>
-                            <li><a href="#">ук</a></li>
-                            <li><a href="#">video</a></li>
-                        </ul>
-                    </nav>
+                <div class="nav_burger">
+                    <span></span>
                 </div>
+                <nav class="nav nav__main">
+                    <ul class="nav__list">
+                        <li><a href="#">факты</a></li>
+                        <li><a href="#">статьи</a></li>
+                        <li><a href="#">персоналии</a></li>
+                        <li><a href="#">ук</a></li>
+                        <li><a href="#">video</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
