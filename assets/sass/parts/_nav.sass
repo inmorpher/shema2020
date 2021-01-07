@@ -10,6 +10,7 @@
         border: none
         border-top: 1px solid var(--decor)
         border-bottom: 1px solid var(--decor)
+        z-index: 10
     &__list
         display: flex
         justify-content: center
@@ -42,8 +43,6 @@
                     color: var(--accent-color)
                 &::after
                     right: -18px
-                    width: 12px
-                    height: 12px
     &-btn
         display: block
         position: absolute
@@ -71,22 +70,27 @@
 
 @media screen and ( max-width: 768px )
     .nav
+        z-index: 10
         &__block
             position: fixed
             margin: 0
             top: 0
+            height: 65px
             background: var(--bg-color)
         &__main
             position: absolute
+            padding: 67px 0 0 0
+            top: 0
             right: -100%
-            top: 70px
             width: 100%
-            height: 100vh
-            background: var(--bg-color)
+            min-height: 100vh
+            background: #00000094
+            // backdrop-filter: blur(2em)
             transition: .2s ease-out
+            z-index: -1
             &.active
                 right: 0
-                top: 70px
+                top: 0
         &__list
             flex-direction: column
             align-items: center
