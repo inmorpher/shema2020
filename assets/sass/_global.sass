@@ -11,7 +11,6 @@ body
     width: 1140px
     margin: 45px auto
     padding: 3px
-    height: 1000px
     background: linear-gradient(270deg, var(--gradient-one) 0%, var(--gradient-two) 100%)
 
 .section
@@ -23,9 +22,30 @@ body
             grid-gap: 3px
 @media screen and ( max-width:  1140px)
     .container
-        width: 100%
+        max-width: 100%
     .main
         width: 100%
         margin: 67px 0
-        
+@media screen and ( max-width:991px )
+    .section
+        &.news
+            &__main
+                grid-auto-rows: 250px
+                grid-gap: 3px    
+@media screen and ( max-width: 768px )
+    .section
+        &.news
+            &__main
+                grid-auto-rows: 150px
+                
+@media screen and ( max-width: 576px )
+    .main
+        padding: 3px 0
+    .section
+        &.news
+            margin: 0 3px
+            &__main
+                grid-auto-rows: 110px
+                
+            
     
