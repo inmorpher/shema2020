@@ -248,8 +248,8 @@ template {
 
 @font-face {
   font-family: 'Roboto Light';
-  src: url("../fonts/Roboto/Roboto-light.eot");
-  src: url("../fonts/Roboto/Roboto-light.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/Roboto-light.woff") format("woff"), url("../fonts/Roboto/Roboto-light.ttf") format("truetype");
+  src: url("../fonts/Roboto/Roboto-Light.eot");
+  src: url("../fonts/Roboto/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/Roboto-Light.woff") format("woff"), url("../fonts/Roboto/Roboto-Light.ttf") format("truetype");
   font-weight: light;
   font-style: normal;
   font-display: swap;
