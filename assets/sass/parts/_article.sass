@@ -1,6 +1,8 @@
 .article
+    display: flex
+    justify-content: center
+    background: none
     &__main
-        display: flex
         background: var(--bg-color)
         color: var(--primary-text-color)
         &:nth-child(1)
@@ -49,6 +51,7 @@
             +RobotoM
             font-size: 24px
             letter-spacing: 0
+        
     &__description
         margin: 0
         padding: 0
@@ -82,6 +85,45 @@
             color: var(--primary-text-color)
             &::before
                 left: -18px
+.articles
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-auto-rows: 150px
+    width: 85%
+    margin: 0 auto 20px auto
+    color: var(--secondary-text-color)
+    border-top: 1px solid var(--decor-light)
+    &__link
+        text-decoration: none
+        color: var(--secondary-text-color)
+        transition: .2s ease-out
+        &:hover
+            color: var(--accent-color)
+    &__img
+        grid-column: 1/2
+        img
+            display: block
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &__content
+        grid-column: 2/4
+        position: relative
+        padding: 0 0 0 30px
+       
+    &__title
+        +Serif
+        font-size: 24px
+        line-height: 29px
+        letter-spacing: 0.045em
+    &__published
+        position: absolute
+        bottom: 5px
+        left: auto
+        +RC
+        font-size: 14px
+        letter-spacing: 0.045em
+        line-height: 50px
 @media screen and ( max-width: 991px )
     .article
         &__title
@@ -92,7 +134,10 @@
             font-size: 14px
             line-height: 14px
         &__heading
-            font-size: 14px           
+            font-size: 14px  
+    .articles
+        &__title
+            font-size: 24px         
 @media screen and ( max-width: 768px )         
     .article
         &__main
@@ -122,6 +167,8 @@
                 height: 100%     
         &__content
             grid-column: 2/4
+    .articles
+        width: 99% 
 @media screen and ( max-width: 576px )           
     .article
         &__main
@@ -136,3 +183,15 @@
             font-size: 12px
             bottom: 3px
             right: 3px
+    .articles
+        grid-auto-rows: 110px
+        margin: 0 auto 5px auto
+        &__content
+            padding: 0 0 0 10px
+        &__title
+            font-size: 14px
+            line-height: 14px
+        &__published
+            left: auto
+            font-size: 12px
+            line-height: 12px

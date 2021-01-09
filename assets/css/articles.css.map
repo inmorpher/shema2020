@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../sass/parts/articles.sass"
+    ],
+    "names": [],
+    "file": "articles.css"
+}

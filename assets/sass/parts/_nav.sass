@@ -1,16 +1,24 @@
 .nav
     &__block
         display: flex
-        justify-content: center
+        justify-content: space-between
         align-items: center
         position: relative
-        margin: 70px 0 0 0
         background: var(--bg-color)
         width: 100%
-        border: none
-        border-top: 1px solid var(--decor)
-        border-bottom: 1px solid var(--decor)
         z-index: 10
+        &--main
+            display: flex
+            justify-content: center
+            align-items: center
+            position: relative
+            margin: 70px 0 0 0
+            background: var(--bg-color)
+            width: 100%
+            border: none
+            border-top: 1px solid var(--decor)
+            border-bottom: 1px solid var(--decor)
+            z-index: 10
     &__list
         display: flex
         justify-content: center
@@ -44,11 +52,12 @@
                 &::after
                     right: -18px
     &-btn
-        display: block
-        position: absolute
-        top: 50%
-        transform: translateY(-50%)
-        right: 0
+        &--main
+            display: block
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            right: 0
         &__item
             display: inline-block
             width: 25px
@@ -73,6 +82,7 @@
         z-index: 10
         &__block
             position: fixed
+            justify-content: center
             margin: 0
             top: 0
             height: 65px
@@ -103,8 +113,9 @@
                     display: block
                     font-size: 30px
         &-btn
+            position: absolute
             left: 0
-            top: 60%
+            
         &_burger
             display: block
             position: absolute
