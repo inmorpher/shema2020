@@ -11,5 +11,6 @@ document.addEventListener('click', event => {
     if (event.target.closest('.nav_burger')) {
         toogler(burgerBtn, 'active');
         toogler(mainMenu, 'active');
+        toogler(document.body, 'disabled');
     }
 })
