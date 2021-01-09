@@ -1,0 +1,74 @@
+.footer
+    padding: 75px 0
+    &__wrapper
+        display: flex
+        justify-content: space-between
+    &__img
+        width: 292px
+        height: 62px
+        object-fit: contain   
+    &__ist
+        margin: 0 5px 0 0 
+        color: var(--primary-text-color)
+        text-align: right
+        text-transform: uppercase
+        +RC
+        font-size: 18px
+        letter-spacing: 0.105em
+    &__list
+        margin: 0
+        padding: 0
+        li
+            margin: 0 0 30px 0
+            a
+                position: relative
+                color: var(--primary-text-color)
+                text-decoration: none
+                text-transform: uppercase
+                +RC
+                font-size: 18px
+                letter-spacing: 0.105em
+                &::after
+                    content: ""
+                    position: absolute
+                    top: 50%
+                    right: -12px
+                    transform: translateY(-50%)
+                    width: 9px
+                    height: 9px
+                    background: url('../img/triangle.svg')
+                    background-repeat: no-repeat
+                    background-size: contain
+                    transition: .2s ease-out
+                &:hover
+                    color: var(--accent-color)
+                    &::after
+                        right: -18px
+    &__icon
+        display: inline-block
+        width: 20px
+        height: 20px
+        cursor: pointer
+        &--share
+            background: url('../img/share.png')
+        &--corrupt
+            margin: 0 0 0 40px
+            background: url('../img/corrupt.png')
+        &--share, &--corrupt
+            background-size: contain
+            background-repeat: no-repeat
+            transition: .2s ease-out
+            &:hover
+                transform: scale(1.1)
+@media screen and ( max-width: 567px )
+    .footer
+        &__wrapper
+            flex-wrap: wrap
+        &__logo, &__menu, &__share
+            margin: 0 0 20px 0
+            width: 100%
+            text-align: center
+        &__ist
+            margin: 0 0 15px 0
+            text-align: center
+    
