@@ -39,6 +39,16 @@
     font-display: swap
 
 @font-face
+    font-family: 'Roboto Condensed Light Italic'
+    src: url('../fonts/RobotoCondensed/RobotoCondensed-LightItalic.eot')
+    src: url('../fonts/RobotoCondensed/RobotoCondensed-LightItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/RobotoCondensed/RobotoCondensed-LightItalic.woff') format('woff'),
+    url('../fonts/RobotoCondensed/RobotoCondensed-LightItalic.ttf') format('truetype')
+    font-weight: light
+    font-style: italic
+    font-display: swap
+
+@font-face
     font-family: 'Roboto'
     src: url('../fonts/Roboto/Roboto-Regular.eot')
     src: url('../fonts/Roboto/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
@@ -111,6 +121,9 @@
 
 @mixin RCitalic
     font-family: 'Roboto Condensed Italic', sans-serif
+
+@mixin RClightitalic
+    font-family: 'Roboto Condensed Light Italic', sans-serif
 
 @mixin RCbolditalic
     font-family: 'Roboto Condensed Bold Italic', sans-serif

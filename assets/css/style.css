@@ -229,6 +229,15 @@ template {
 }
 
 @font-face {
+  font-family: 'Roboto Condensed Light Italic';
+  src: url("../fonts/RobotoCondensed/RobotoCondensed-LightItalic.eot");
+  src: url("../fonts/RobotoCondensed/RobotoCondensed-LightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoCondensed/RobotoCondensed-LightItalic.woff") format("woff"), url("../fonts/RobotoCondensed/RobotoCondensed-LightItalic.ttf") format("truetype");
+  font-weight: light;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Roboto';
   src: url("../fonts/Roboto/Roboto-Regular.eot");
   src: url("../fonts/Roboto/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
@@ -310,7 +319,7 @@ body {
   }
   .main {
     width: 100%;
-    margin: 67px 0;
+    margin: 67px 0 0 0;
   }
 }
 
@@ -851,20 +860,23 @@ body {
     -ms-grid-column-span: 3;
     grid-column: 1/4;
   }
-  .article__main:nth-child(4) {
-    direction: rtl;
-  }
   .article__main:nth-child(4) .article__img {
-    -ms-grid-column: 3;
-    grid-column: 3;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -ms-grid-column: 1;
+    grid-column: 1;
   }
   .article__main:nth-child(4) .article__title {
     text-align: left;
   }
   .article__main:nth-child(4) .article__content {
-    -ms-grid-column: 1;
+    -ms-grid-column: 2;
     -ms-grid-column-span: 2;
-    grid-column: 1/3;
+    grid-column: 2/4;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
   .article__link-img {
     width: 100%;
@@ -958,6 +970,120 @@ body {
   }
   .quote__text {
     font-size: 16px;
+  }
+}
+
+/* Game styles */
+.game__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.game__title {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  font-family: 'Roboto Condensed Bold Italic', sans-serif;
+  font-size: 60px;
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: right;
+  letter-spacing: 0.045em;
+}
+
+.game__elems {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 100px;
+}
+
+.game__button {
+  margin: 0 0 0 32px;
+  position: relative;
+  background: none;
+  border: none;
+  outline: none;
+  font-family: 'Roboto Condensed Light Italic', sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.game__button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 9px;
+  height: 9px;
+  background: url("../img/triangle_b.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transition: .2s ease-out;
+  -o-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.game__button:hover::after {
+  right: -10px;
+}
+
+.game__icon {
+  margin: 0 0 0 70px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: url("../img/corrupt_b.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  .game {
+    padding: 20px 0;
+  }
+  .game__wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .game__title {
+    margin: 0;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    text-align: center;
+    font-size: 38px;
+  }
+  .game__elems {
+    height: auto;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .game__button {
+    margin: 15px 0;
+  }
+  .game__icon {
+    margin: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
