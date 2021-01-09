@@ -1,0 +1,62 @@
+.single-article
+    color: var(--secondary-text-color)
+    font-size: 24px
+    letter-spacing: 0.045em
+    &__heading
+        position: relative
+        display: inline-block
+        +RC
+        font-size: 18px
+        line-height: 25px
+        text-transform: uppercase
+        color: var(--accent-color)
+        z-index: 1
+        &::before
+            content: ""
+            position: absolute
+            left: 0
+            top: 0
+            height: 80%
+            width: 110%
+            background: transparent
+            border-top: 1px solid var(--accent-color)
+            border-right: 1px solid var(--accent-color)
+            transform: skewX(35deg)
+            z-index: -1
+    &__title
+        +Serif
+        font-size: 40px
+        line-height: 50px
+    &__quote
+        +Serif
+        font-style: italic
+        color: var(--decor-light)
+    &__published
+        margin: 0 0 20px 0
+        +RC
+        font-size: 24px  
+    img
+        width: 100%
+    p
+        +Roboto
+        font-size: 18px
+        line-height: 28px       
+@media screen and ( max-width: 1140px )
+    .single-article
+        padding: 0 20px
+@media screen and ( max-width: 768px )
+    .single-article
+        &__heading
+            font-size: 30px
+            line-height: 35px
+        &__title
+            margin: 0
+            font-size: 24px
+            line-height: 30px
+        &__published
+            font-size: 18px
+        p
+            font-size: 16px
+            line-height: 24px
+    
+    
