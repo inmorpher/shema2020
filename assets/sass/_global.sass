@@ -10,14 +10,15 @@ body
     margin: 0 auto
 .main
     width: 1140px
-    margin: 45px auto 0 auto
+    margin: 0 auto
+    padding: 0 0 40px 0
     background: var(--secondary-bg-color)
     &__home
         position: relative  
         padding: 3px
         background: linear-gradient(270deg, var(--gradient-one) 0%, var(--gradient-two) 100%)
 .news
-    padding: 0 0 80px 0
+    padding: 0
     &__main, &__wrapper
         display: grid
         grid-template-columns: 1fr 1fr 1fr
@@ -58,7 +59,6 @@ body
         max-width: 100%
     .main
         width: 100%
-        margin: 67px 0 0 0 
     .image-block
        height: 290px
 @media screen and ( max-width:991px )
@@ -69,8 +69,9 @@ body
     .image-block
        height: 230px
 @media screen and ( max-width: 768px )
-    &.news
-        padding: 0 0 40px 0
+    .main
+        margin: 67px 0 0 0 
+    .news
         &__main, &__wrapper
             grid-auto-rows: 150px
     .image-block

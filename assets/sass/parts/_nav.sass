@@ -1,11 +1,19 @@
 .nav
+    flex-basis: 60%
+    &__main
+        flex-basis: 80%
+    &__wrapper
+        display: flex
+        justify-content: center
+        align-items: center
     &__block
         display: flex
         justify-content: space-between
         align-items: center
         position: relative
         width: 100%
-        z-index: 10
+        background: var(--bg-color)
+        // z-index: 10
         &--main
             display: flex
             justify-content: center
@@ -16,11 +24,12 @@
             border: none
             border-top: 1px solid var(--decor)
             border-bottom: 1px solid var(--decor)
-            z-index: 10
+            // z-index: 10
     &__list
         display: flex
         justify-content: center
         list-style: none
+        padding: 0
         flex-wrap: wrap
         li
             position: relative
@@ -50,36 +59,67 @@
                 &::after
                     right: -18px
     &-btn
+        flex-basis: 20%
+        text-align: right
         &--main
-            display: block
-            position: absolute
-            top: 50%
-            transform: translateY(-50%)
-            right: 0
+            flex-basis: auto
         &__item
             display: inline-block
             width: 25px
             height: 25px
             margin: 0 15px
             cursor: pointer
+            &--search
+                background: url('../img/search.png')
             &--share
+                display: none
                 background: url('../img/share.png')
+                &.visible
+                    display: inline-block!important
             &--corrupt
                 background: url('../img/corrupt.png')
-            &--share, &--corrupt
+            &--share, &--corrupt, &--search
                 background-size: contain
                 background-repeat: no-repeat
                 transition: .2s ease-out
                 &:hover
                     transform: scale(1.15)
     &_burger
+        position: relative
         display: none
-
+        margin: 0 15px 0 0
+        width: 35px
+        height: 25px
+        &::before, &::after
+            content: ''
+            position: absolute
+            width: 100%
+            height: 2px
+            background: var(--accent-color)
+            transition: .2s ease-out
+        &::before
+            top: 0
+        &::after
+            bottom: 0
+        span
+            position: absolute
+            left: 0
+            top: 12px
+            width: 100%
+            height: 2px
+            background: var(--accent-color)
+            transition: .2s ease-out
+@media screen and (max-width: 991px)
+    .nav
+        &__list
+            li
+                margin: 0 15px
 @media screen and ( max-width: 768px )
     .nav
-        z-index: 10
+        &__wrapper
+            justify-content: space-between
         &__block
-            position: fixed
+            position: static
             justify-content: center
             margin: 0
             top: 0
@@ -89,15 +129,13 @@
             position: absolute
             padding: 67px 0 0 0
             top: 0
-            right: -100%
+            top: -110vh
             width: 100%
             min-height: 100vh
             background: #000000e6
-            // backdrop-filter: blur(2em)
-            transition: .2s ease-out
+            transition: .4s ease-out
             z-index: -1
             &.active
-                right: 0
                 top: 0
         &__list
             flex-direction: column
@@ -111,36 +149,13 @@
                     display: block
                     font-size: 30px
         &-btn
-            position: absolute
-            left: 0
-            
+            order: 1
+            flex-basis: auto
+            &__item
+                margin: 0 0 0 10px
         &_burger
             display: block
-            position: absolute
-            top: 50%
-            transform: translateY(-50%)
-            right: 5%
-            width: 35px
-            height: 25px
-            &::before, &::after
-                content: ''
-                position: absolute
-                width: 100%
-                height: 2px
-                background: var(--accent-color)
-                transition: .2s ease-out
-            &::before
-                top: 0
-            &::after
-                bottom: 0
-            span
-                position: absolute
-                left: 0
-                top: 12px
-                width: 100%
-                height: 2px
-                background: var(--accent-color)
-                transition: .2s ease-out
+            order: 3
             &.active
                 &::before, &::after
                     content: ''
@@ -156,8 +171,3 @@
                     transform: rotate(-45deg)
                 span
                     transform: scale(0)
-@media screen and ( max-width: 576px )
-    .nav
-        &-btn
-            &__item
-                margin: 0 10px

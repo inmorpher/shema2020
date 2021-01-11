@@ -13,7 +13,7 @@
     <header class="header header__main" style="background: url('assets/img/header-bg.jpg');">
         <div class="container header__wrapper">
             <!-- HEADER LOGO START -->
-            <div class="header-logo">
+            <div class="header__logo ">
                 <img class="header__img" src="./assets/img/logo.png" alt="Logo">
             </div>
             <!-- HEADER LOGO END -->
@@ -30,23 +30,19 @@
         </div>
         <!-- NAVIGATIONAL BLOCK START -->
         <div class="nav__block nav__block--main">
-            <div class="container">
+            <div class="container nav__wrapper">
                 <!-- MOBILE-ONLY LOGO START -->
-                <div class="header-logo header-logo__mobile">
+                <div class="header-logo header-logo--main">
                     <img src="assets/img/logo_mobile.png" alt="">
                 </div>
                 <!-- MOBILE-ONLY LOGO END -->
-                <!-- NAVIGATIONAL ICONS START -->
-                <div class="nav-btn nav-btn--main">
-                    <i class="nav-btn__item nav-btn__item--share"></i>
-                    <i class="nav-btn__item nav-btn__item--corrupt"></i>
-                </div>
-                <!-- NAVIGATIONAL ICONS END -->
-                <!-- MOBILE-ONLY BURGER START -->
-                <div class="nav_burger">
-                    <span></span>
-                </div>
-                <!-- MOBILE-ONLY BURGER START -->
+                <!-- <div class="search">
+                    <form class="search__form" action="#">
+                        <input class="search__input"type="text" name="s" id="">
+                        <input class="search__submit "type="submit" value="">  
+                    </form>
+                </div> -->
+               
                 <!-- MAIN MENY START -->
                 <nav class="nav nav__main">
                     <ul class="nav__list">
@@ -58,6 +54,18 @@
                     </ul>
                 </nav>
                 <!-- MAIN MENY END -->
+                <!-- NAVIGATIONAL ICONS START -->
+                <div class="nav-btn nav-btn--main">
+                    <i class="nav-btn__item nav-btn__item--search" tabindex="1" value="поиск"></i>
+                    <i class="nav-btn__item nav-btn__item--share"></i>
+                    <i class="nav-btn__item nav-btn__item--corrupt"></i>
+                </div>
+                <!-- NAVIGATIONAL ICONS END -->
+                <!-- MOBILE-ONLY BURGER START -->
+                <div class="nav_burger">
+                    <span></span>
+                </div>
+                <!-- MOBILE-ONLY BURGER START -->
             </div>
         </div>
         <!-- NAVIGATIONAL BLOCK END -->
@@ -114,8 +122,7 @@
 
                         <!-- ARTICLE TEXT START -->
                         <p class="article__description">К сожалению, моряки Украины оказались вовлечены участниками
-                            кормушки в серые
-                            схемы коррупционеров.</p>
+                            кормушки в серые`.</p>
                         <!-- ARTICLE TEXT END -->
                     </a>
 
@@ -188,10 +195,11 @@
                    <!-- QUOTE TITLE START -->
                     <h2 class="quote__title">corrumpere</h2>
                     <!-- QUOTE TITLE END -->
+                    <!-- QUOTE TEXT START -->
+                     <p class="quote__text">«растлевать», лат. corruptio «подкуп, продажность; порча, разложение; растление»
 
-                    <!-- QUOTE TEXT START -->
-                     <p class="quote__text">«растлевать», лат. corruptio «подкуп, продажность; порча, разложение; растление»</p>
-                    <!-- QUOTE TEXT START -->
+                    </p>
+                    <!-- QUOTE TEXT end -->
             </div>
         </section>
         <!-- SECTION QUOTE END -->

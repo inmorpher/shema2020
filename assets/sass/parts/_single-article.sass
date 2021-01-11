@@ -4,6 +4,7 @@
     letter-spacing: 0.045em
     &__heading
         position: relative
+        margin: 0
         display: inline-block
         +RC
         font-size: 18px
@@ -15,7 +16,7 @@
             content: ""
             position: absolute
             left: 0
-            top: 0
+            top: -4px
             height: 80%
             width: 110%
             background: transparent
@@ -24,6 +25,7 @@
             transform: skewX(35deg)
             z-index: -1
     &__title
+        margin: 0.40em 0
         +Serif
         font-size: 40px
         line-height: 50px
@@ -33,8 +35,9 @@
         color: var(--decor-light)
     &__published
         margin: 0 0 20px 0
-        +RC
-        font-size: 24px  
+        +RClight
+        font-size: 20px 
+        letter-spacing: 0.1em 
     img
         width: 100%
     p
@@ -47,6 +50,7 @@
 @media screen and ( max-width: 768px )
     .single-article
         &__heading
+            margin: 10px 0
             font-size: 30px
             line-height: 35px
         &__title
@@ -54,7 +58,7 @@
             font-size: 24px
             line-height: 30px
         &__published
-            font-size: 18px
+            font-size: 16px
         p
             font-size: 16px
             line-height: 24px
