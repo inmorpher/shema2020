@@ -543,42 +543,57 @@ body.secondary-bg {
   border-radius: 5px;
 }
 
-.search {
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
-  font-family: 'Roboto Condensed Italic', sans-serif;
-}
-
-.search__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.search-form {
+  position: absolute;
+  display: inline-block;
+  left: -80px;
+  top: 0;
+  width: 175px;
   height: 25px;
+  background: var(--bg-color);
+  border: none;
+  font-family: 'Roboto Condensed Regular', sans-serif;
+  letter-spacing: 0.1em;
+  opacity: 0;
+  -webkit-transition: .2s ease-out;
+  -o-transition: .2s ease-out;
+  transition: .2s ease-out;
+  z-index: -1;
 }
 
-.search__input {
+.search-form--main {
+  left: -175px;
+}
+
+.search-form.visible {
+  display: inline-block;
+  opacity: 1;
+  -webkit-transition: .2s ease-out;
+  -o-transition: .2s ease-out;
+  transition: .2s ease-out;
+  z-index: 1;
+}
+
+.search-form__input {
   background: transparent;
-  height: 100%;
+  height: 25px;
   width: 100%;
   border: none;
-  border-bottom: 1px solid #111;
+  border-bottom: 1px solid #fff;
+  border-radius: 0px;
   color: var(--primary-text-color);
   font-style: italic;
+  font-size: 16px;
   text-transform: uppercase;
   outline: none;
+  -webkit-transition: .2s ease-out;
+  -o-transition: .2s ease-out;
+  transition: .2s ease-out;
 }
 
-.search__submit {
-  width: 25px;
-  background: url("../img/search.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: none;
-  outline: none;
-  cursor: pointer;
+.search-form__submit {
+  visibility: hidden;
+  width: 0px;
 }
 
 @media screen and (max-width: 768px) {
@@ -600,8 +615,18 @@ body.secondary-bg {
   .header-logo--main {
     display: block;
   }
-  .search {
-    display: none;
+  .search-form {
+    top: 46px;
+    left: 0;
+    width: 100vw;
+    height: 45px;
+  }
+  .search-form__input {
+    margin: 0;
+    padding: 0 15px;
+    height: 100%;
+    border: none;
+    font-size: 22px;
   }
 }
 
@@ -717,6 +742,7 @@ body.secondary-bg {
 }
 
 .nav-btn {
+  position: relative;
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
   text-align: right;
@@ -733,6 +759,7 @@ body.secondary-bg {
   height: 25px;
   margin: 0 15px;
   cursor: pointer;
+  outline: none;
 }
 
 .nav-btn__item--search {
