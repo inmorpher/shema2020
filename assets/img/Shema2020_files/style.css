@@ -597,9 +597,6 @@ body.secondary-bg {
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
   }
-  .header-logo--main {
-    display: block;
-  }
   .search {
     display: none;
   }

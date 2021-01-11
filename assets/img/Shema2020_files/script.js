@@ -27,7 +27,7 @@ document.addEventListener('click', event => {
     // SHARE BUTTON ACTION
     if (event.target == shareIcon || event.target == footerShareIcon) {
         shareData = {
-            title: shareTitle,
+            title: "shareTitle",
             url: location.href
         }
         navigator.share(shareData);
